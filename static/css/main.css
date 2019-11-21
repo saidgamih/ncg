@@ -348,3 +348,27 @@ footer {
 .info-cnt p {
     color: #555;
 }
+
+.fs-links {
+    display: flex;
+    justify-content: center;
+}
+
+.fs-link {
+    margin: 5px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background: white;
+    border-radius: 50%;
+    color: black;
+    font-size: 20px;
+}
+
+.fs-link:hover,
+.fs-link:focus {
+    transform: scale(1.2);
+    color: var(--red);
+}
