@@ -87,20 +87,20 @@ nav {
     background: #ccc;
 }
 
-.slick-next {
+.slider .slick-next {
     position: absolute;
     right: 15px;
     z-index: 10;
 }
 
-.slick-prev {
+.slider .slick-prev {
     position: absolute;
     left: 15px;
     z-index: 10;
 }
 
-.slick-next::before,
-.slick-prev::before {
+.slider .slick-next::before,
+.slider .slick-prev::before {
     color: var(--red);
 }
 
@@ -126,10 +126,16 @@ nav {
     width: 100%;
     text-transform: uppercase;
     font-size: 45px;
+    font-weight: 500;
 }
 
 .inner-slide-e span {
     width: 100%;
+}
+
+.inner-slide-e h5 {
+    font-weight: 200;
+    font-size: 20px;
 }
 
 .btn {
@@ -137,6 +143,7 @@ nav {
 }
 
 .ybtn {
+    font-weight: 200;
     background: var(--red);
     color: white;
 }
@@ -202,35 +209,36 @@ nav {
 
 .news {}
 
-.news article {
-    background: white;
-    box-shadow: 0px 0px 5px #ccc;
-    height: 100%;
-}
-
 .art-cnt {
     padding: 5px;
 }
 
-.img-cnt {
-    overflow: hidden;
-}
-
-.img-cnt img {
-    width: 100%;
+.news article {
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 0px 5px #ccc;
+    height: 300px;
 }
 
 .det-cnt {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    box-sizing: border-box;
+    height: 262px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2));
     padding: 15px;
+    color: white;
 }
 
 .det-cnt h2 {
-    text-transform: uppercase;
+    text-transform: capitalize;
     overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    line-height: 1.5;
+    font-weight: 400;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    line-height: 35px;
 }
 
 .det-cnt p {
@@ -280,6 +288,7 @@ footer {
 }
 
 .links ul li {
+    display: flex;
     font-size: 14px;
     word-wrap: break-word;
     margin: 5px 0px;
@@ -287,9 +296,14 @@ footer {
 }
 
 .links ul li i {
-    display: inline-block;
-    width: 20px;
+    display: block;
+    width: 20px !important;
     text-align: center;
+    margin-right: 7px;
+    line-height: 20px;
+    flex-basis: 20px;
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 
 .links ul li a:hover {
@@ -301,6 +315,29 @@ footer {
     font-size: 12px;
     background: rgb(29, 29, 29);
     padding: 5px 0px;
+}
+
+.partners {
+    margin-top: 20px;
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.partners .part-slide {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+}
+
+.part-slide img {
+    height: 90%;
+}
+
+.partners .slick-next::before,
+.partners .slick-prev::before {
+    color: var(--red);
 }
 
 
@@ -317,7 +354,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .inner-header h1 {
@@ -343,10 +380,30 @@ footer {
 
 .logo-cnt img {
     width: 60%;
+    max-width: 150px;
+}
+
+.info-cnt h4 {
+    color: rgb(39, 39, 39);
+    font-weight: normal;
+    font-size: 22px;
+}
+
+.info-cnt h5 {
+    color: #555;
+    font-weight: normal;
 }
 
 .info-cnt p {
+    display: flex;
     color: #555;
+    font-weight: normal;
+}
+
+.info-cnt i {
+    margin-right: 10px;
+    line-height: 25px;
+    color: var(--red);
 }
 
 .fs-links {
@@ -371,4 +428,53 @@ footer {
 .fs-link:focus {
     transform: scale(1.2);
     color: var(--red);
+}
+
+.sr-img {
+    overflow: hidden;
+    padding: 0px 15px;
+}
+
+.sr-img img {
+    width: 100%;
+}
+
+.sr-det {
+    padding: 15px 15px 20px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.sr-det h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.st-sep {
+    height: 3px;
+    background: linear-gradient(to right, var(--red), var(--dark-red));
+    width: 50%;
+    margin: auto;
+}
+
+.sr-det ul {
+    list-style-type: none;
+    font-size: 20px;
+}
+
+.sr-det ul li {
+    display: flex;
+    /* align-items: center; */
+    line-height: 25px;
+    margin-bottom: 15px;
+    color: #555;
+    font-weight: small;
+}
+
+.sr-det ul li i {
+    margin-right: 10px;
+    color: var(--dark-red);
+    line-height: 25px;
 }
