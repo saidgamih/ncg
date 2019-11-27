@@ -5,12 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>NOS SERVICES | NGC</title>
+    <title>CONTACTEZ-NOUS | NGC</title>
     <link rel="stylesheet" href="static/slick/slick.css" />
     <link rel="stylesheet" href="static/slick/slick-theme.css" />
     <link rel="stylesheet" href="static/fontawesome/css/all.css" />
     <link rel="stylesheet" href="static/css/bootstrap.min.css" />
     <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
 </head>
 
 <body>
@@ -62,74 +64,43 @@
     </header>
 
     <main>
+        <div class="container-fluide">
+            <div id="mapid" style="height: 400px; width: 100%"></div>
+        </div>
+        <div class="container pt-5 pb-4">
+            <div class="row">
+                <div class="col-md-6 contact-form mb-5">
+                    <h4 class="text-center">Formulaire de contact</h4>
+                    <div class="t-sep mb-3"></div>
+                    <form action="/email.php" method="POST">
+                        <div class="input-el">
+                            <label for=""><i class="fas fa-user"></i></label>
+                            <input type="text" name="name" placeholder="Nom">
+                        </div>
+                        <div class="input-el">
+                            <label for=""><i class="fas fa-at"></i></label>
+                            <input type="email" name="email" placeholder="Email">
+                        </div>
+                        <div class="input-el">
+                            <textarea name="message" placeholder="Votre message"></textarea>
+                        </div>
+                        <button class="btn ybtn w-100">Envoyer</button>
+                    </form>
+                </div>
 
-        <!-- PAGE HEAD -->
-        <div class="container-fluide outer-header" style="background-image: url('static/images/sheader.jpg');">
-            <div class="container-fluide inner-header">
-                <div>
-                    <h1>Nos Services</h1>
-                    <div class="t-sep"></div>
+                <div class="col-md-6 coord">
+                    <h4 class="text-center">Nos coordonées</h4>
+                    <div class="t-sep mb-3"></div>
+                    <ul>
+                        <li><i class="fas fa-at"></i><span>ngc.tanger@gmail.com</span></li>
+                        <li><i class="fas fa-phone-alt"></i><span>+212 661 314 128</span></li>
+                        <li><i class="fas fa-phone-alt"></i><span>+212 661 705 017</span></li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i><span>angle Mohamed V et Rue Tantane Residence LINA N°11, App 88-Tanger</span></li>
+                    </ul>
                 </div>
             </div>
         </div>
-
-        <!-- Variables -->
-
-        <div class="container my-4 overflow-auto">
-
-            <div class="row mb-3" id="renovation">
-                <div class="col-lg-6 sr-img">
-                    <img src="static/images/service1.jpg" alt="">
-                </div>
-                <div class="col-lg-6 w-100 sr-det">
-                    <div class="w-100">
-                        <h2>Rénovation & Travaux Neufs</h2>
-                        <div class="st-sep"></div>
-                        <ul class="mt-4">
-                            <li><i class="fas fa-angle-right"></i> <span>Construction métallique</span></li>
-                            <li><i class="fas fa-angle-right"></i> <span>Traitement d’air et chauffage</span></li>
-                            <li><i class="fas fa-angle-right"></i> <span>Aménagement de l’intérieur, rénovation et finition</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row mb-3" id="maintenance">
-                <div class="col-lg-6 sr-img">
-                    <img src="static/images/service2.jpg" alt="">
-                </div>
-                <div class="col-lg-6 w-100 sr-det">
-                    <div class="w-100">
-                        <h2>Maintenance & Fiabilité Industrielle</h2>
-                        <div class="st-sep"></div>
-                        <ul class="mt-4">
-                            <li><i class="fas fa-angle-right"></i> <span>Froid, détection incendie, CTA, électricité</span></li>
-                            <li><i class="fas fa-angle-right"></i> <span>Fourniture industrielle</span></li>
-                            <li><i class="fas fa-angle-right"></i> <span>Efficacité énergétique: évaluation, optimisation, solution</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row mb-3" id="geniecivil">
-                <div class="col-lg-6 sr-img">
-                    <img src="static/images/service3.jpg" alt="">
-                </div>
-                <div class="col-lg-6 w-100 sr-det">
-                    <div class="w-100">
-                        <h2>Génie Civil & Signalisation</h2>
-                        <div class="st-sep"></div>
-                        <ul class="mt-4">
-                            <li><i class="fas fa-angle-right"></i> <span>Construction du bâtiment</span></li>
-                            <li><i class="fas fa-angle-right"></i> <span>Traitement des joints et fissurations</span></li>
-                            <li><i class="fas fa-angle-right"></i> <span>Travaux de signalisation routière</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <button class="btn ybtn float-right" onclick="location.href='contact.html'">
-                    Contactez-nous <i class="fas fa-arrow-right"></i>
-                </button>
         </div>
     </main>
 
@@ -193,6 +164,7 @@
     <script src="static/slick/slick.min.js"></script>
     <script src="static/js/bootstrap.min.js"></script>
     <script src="static/js/main.js"></script>
+    <script async src="static/js/map.js"></script>
 </body>
 
 </html>

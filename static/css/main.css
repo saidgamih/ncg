@@ -223,18 +223,18 @@ nav {
 .det-cnt {
     width: 100%;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     box-sizing: border-box;
     height: 262px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2));
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.3));
     padding: 15px;
     color: white;
 }
 
 .det-cnt h2 {
-    text-transform: capitalize;
+    text-transform: uppercase;
     overflow: hidden;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 25px;
     width: 100%;
     text-align: center;
@@ -477,4 +477,90 @@ footer {
     margin-right: 10px;
     color: var(--dark-red);
     line-height: 25px;
+}
+
+.map {
+    height: 400px;
+    width: 100%;
+}
+
+#mapid {
+    border: 1px solid #CCC;
+    box-shadow: 0px 0px 5px #CCC;
+}
+
+
+/* Contact Page Style */
+
+.coord {}
+
+.coord ul {
+    list-style-type: none;
+}
+
+.coord ul li {
+    color: rgb(70, 70, 70);
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.coord ul li i {
+    display: inline-block;
+    width: 30px;
+    min-width: 30px;
+    text-align: center;
+    line-height: 28px;
+    color: var(--dark-red);
+}
+
+.coord h4,
+.contact-form h4 {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.contact-form form {
+    width: 100%;
+}
+
+.contact-form .input-el {
+    width: 100%;
+    display: flex;
+    line-height: 30px;
+    border-bottom: 1px solid var(--dark-red);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.input-el label {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: var(--dark-red);
+    margin: 0;
+}
+
+.input-el input {
+    height: 30px;
+    width: 100%;
+    border: 0;
+    outline: 0;
+}
+
+.input-el input::placeholder,
+.input-el textarea::placeholder {
+    color: rgb(180, 180, 180);
+}
+
+.input-el textarea {
+    width: 100%;
+    min-width: 100%;
+    min-height: 150px;
+    border: 0;
+    outline: 0;
+    resize: none;
 }
