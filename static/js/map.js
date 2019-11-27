@@ -1,6 +1,6 @@
 var map = L.map('mapid')
     .setView([35.711977, -5.894070], 17);
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {detectRetina: true,
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 marker = new L.marker([35.711977, -5.894070]);
